@@ -6,28 +6,28 @@
 
 <h1>{{ mytodo.title }}</h1>
 
-<form method =  "POST">
+<form method =  "POST" autocomplete="off">
 
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit"> Save my todo! </button>
 
 </form>
-
+<br />
 <form method =  "POST" action = "{% url 'completedtodo' mytodo.id %}">
 
   {% csrf_token %}
   <button type="submit">Completed!</button>
 
 </form>
-
+<br />
 <form method =  "POST" action = "{% url 'deletetodo' mytodo.id %}">
 
   {% csrf_token %}
   <button type="submit">Delete the todo?</button>
 
 </form>
-
+<br />
 <form method =  "POST" action = "{% url 'currenttodos'%}">
 
   {% csrf_token %}

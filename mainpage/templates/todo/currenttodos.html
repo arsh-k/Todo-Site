@@ -1,0 +1,29 @@
+{% extends 'base_template/base.html' %}
+
+{% block content %}
+
+
+<h1> Current Todos </h1>
+
+<ul>
+  {% for todo in todos %}
+  <li>
+  {% if todo.priority %}  <b> {% endif %}
+
+  <a href = "{% url 'viewtodo' todo.id%}">{{ todo.title }}</a>
+
+  {% if todo.priority %}  </b> {% endif %}
+
+  {% if todo.memo %}
+
+  <br>
+  -  {{ todo.memo }}
+
+  {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<a href = "{% url 'createtodo' %}">Create a New Todo!</a>
+
+{% endblock %}

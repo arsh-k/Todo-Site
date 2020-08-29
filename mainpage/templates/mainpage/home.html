@@ -1,0 +1,33 @@
+{% extends 'base_template/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body>
+    <div class = "main">
+      <h1 class = "main-head"> All your todos at one location!</h1>
+      <p>When life gets busy, people usually have a tough time remembering
+        what they want to do daily. This site has been created for those
+        people who might want to achieve something daily or even for the
+        forgetful.</p>
+    {% if user.is_authenticated %}
+    <form  action ="{% url 'currenttodos' %}" class = "pagebottom">
+      {% csrf_token %}
+      <button type="submit" class = "btn btn-danger">Go To My Todos!</button>
+    </form>
+    {% else %}
+    <form  action ="{% url 'signupuser' %}" class = "pagebottom">
+      {% csrf_token %}
+      <button type="submit" class = "btn btn-dark">Start!</button>
+    </form>
+    </div>
+    {% endif %}
+  </body>
+</html>
+
+{% endblock %}

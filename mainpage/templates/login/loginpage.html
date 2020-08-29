@@ -1,0 +1,18 @@
+{% extends 'base_template/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1>Login</h1>
+
+<h2>{{ error }}</h2>
+
+<form method="POST">
+{% csrf_token %}
+{{ form|crispy }}
+<br>
+<button type="submit"> Login and resume! </button>
+</form>
+
+
+{% endblock %}

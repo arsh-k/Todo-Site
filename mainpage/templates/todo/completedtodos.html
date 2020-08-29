@@ -1,0 +1,41 @@
+{% extends 'base_template/base.html' %}
+
+{% block content %}
+
+<h1> Completed Todos </h1>
+
+<ul>
+  {% for todo in todos %}
+  <li>
+  {% if todo.priority %}  <b> {% endif %}
+
+    {{ todo.title }}
+
+  {% if todo.priority %}  </b> {% endif %}
+
+  {% if todo.memo %}
+
+  <br>
+
+  -  {{ todo.memo }}
+
+  {% endif %}
+
+  <br>
+  
+Date Completed: {{ todo.completion|date:'j F Y H:i' }}
+
+  </li>
+  {% endfor %}
+</ul>
+
+<form method =  "POST" action = "{% url 'clearcompleted' %}">
+
+  {% csrf_token %}
+  <button type="submit">Clear all todos?</button>
+
+</form>
+
+
+
+{% endblock %}

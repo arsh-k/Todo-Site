@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Fondamento';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Fondamento Regular'), local('Fondamento-Regular'), url(https://fonts.gstatic.com/s/fondamento/v10/4UaHrEJGsxNmFTPDnkaJ96rp5w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Satisfy Regular'), local('Satisfy-Regular'), url(https://fonts.gstatic.com/s/satisfy/v10/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v11/m8JVjfNVeKWVnh3QMuKkFcZVaUuH.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.signup , .login {
+
+}
+
+.main-head {
+  font-family: Fondamento, sans-serif;
+  text-align: center;
+}
+
+.title{
+  grid-column-start: 1 / span 1;
+}
+.navbar {
+  grid-row-start: 1 / span 1;
+}
+
+p {
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 20px;
+  width: 700px;
+}
+
+body {
+  background-image: url('/static/background.jpg');
+}
+
+div.main {
+  display: grid;
+  grid-template-rows: repeat(6, 100px);
+  justify-items: center;
+}
+
+div.main h1{
+  margin-top: 30px;
+  align-items: center;
+  grid-row: 2 / 3;
+}
+
+div.main p{
+  grid-row: 3 / 4;
+}
+
+.pagebottom{
+  margin-top: 30px;
+  grid-row: 4 / 5;
+}
